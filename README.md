@@ -1,1 +1,1 @@
-# oditn-rockpaperscissor
+# odin-rockpaperscissor
