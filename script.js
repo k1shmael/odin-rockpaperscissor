@@ -12,7 +12,7 @@ function getComputerChoice(paper,rock,scissors){
    const  computerChoice = getComputerChoice("rock", "paper", "scissors")
    const    userChoice = prompt("Pick rock paper or scissors")
    
-   if (userChoice = "rock" )
+   
 
 
 
