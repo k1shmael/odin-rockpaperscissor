@@ -1,10 +1,19 @@
-function getcomputerChoice() {
- 
+function getComputerChoice(paper,rock,scissors){
+    
+    let computerChoices = [rock, paper, scissors];
 
-return"rock"} 
+    const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];  
 
 
-let userInput = prompt("Choose rock paper or scissors ");
-console.log(userInput);
+    return computerChoice ; 
 
-console.log (getcomputerChoice());
+}
+
+   const  computerChoice = getComputerChoice("rock", "paper", "scissors")
+   const    userChoice = prompt("Pick rock paper or scissors")
+   
+   if (userChoice = "rock" )
+
+
+
+
