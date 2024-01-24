@@ -8,24 +8,19 @@ function getComputerChoice(paper,rock,scissors){
     return computerChoice ; 
 
 }
-
-   
-   
-   
-let  userChoice = prompt("Rock, Paper or Scissors")
-   
-   do {
-
-    
-    
-    
-   
+let computerChoice = getComputerChoice("eock", "paper", "scissors");
 
 
-   if(userChoice ===  ("rock" || "scissors" || "paper") ){
+ function userChoice() {
+        let  userChoice = prompt("Rock, Paper or Scissors").toLowerCase();
+   
+  
+    if(userChoice ===  ("rock" || "scissors" || "paper") ){
 
 
         console.log(`You picked ${userChoice}! `)
+
+       
         
 
         
@@ -35,15 +30,23 @@ let  userChoice = prompt("Rock, Paper or Scissors")
 
             console.log("Try Again")
         }
+    }
 
-    }  while(userChoice != ("rock" || "scissors" || "paper"))
 
 
-    
-    
-    
-    
-    ///console.log(`The computer picked ${computerChoice}!`)
+    userChoice();
+
+    console.log(`The computer picked ${computerChoice}!`)
+
+    if( (userChoice === "paper"  && computerChoice === "rock") || ( userChoice === "scissors" && computerChoice === "paper")
+    || (userChoice == "rock" && computerChoice == "scissors") )
+{
+    console.log("You win!")
+}
+else{
+
+    console.log("you lose")
+}
 
 
 
