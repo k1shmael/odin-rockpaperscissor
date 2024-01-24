@@ -9,11 +9,43 @@ function getComputerChoice(paper,rock,scissors){
 
 }
 
-   const  computerChoice = getComputerChoice("rock", "paper", "scissors")
-   const    userChoice = prompt("Pick rock paper or scissors")
+   
+   
+   
+let  userChoice = prompt("Rock, Paper or Scissors")
+   
+   do {
 
-   console.log(`You picked ${userChoice}! `)
-   console.log(`The computer picked ${computerChoice}!`)
+    
+    
+    
+   
+
+
+   if(userChoice ===  ("rock" || "scissors" || "paper") ){
+
+
+        console.log(`You picked ${userChoice}! `)
+        
+
+        
+    }
+
+    else{
+
+            console.log("Try Again")
+        }
+
+    }  while(userChoice != ("rock" || "scissors" || "paper"))
+
+
+    
+    
+    
+    
+    ///console.log(`The computer picked ${computerChoice}!`)
+
+
 
 
    
