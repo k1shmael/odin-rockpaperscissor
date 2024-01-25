@@ -31,10 +31,13 @@ function userChoices() {
     }
 
 
-
+ for (let i = 0; i < 5; i++) {
     
    let computerChoice = getComputerChoice("rock", "paper", "scissors");
    let userChoice = userChoices();
+   let tie = 0;
+   let win = 0;
+   let lose = 0;
    
 
     console.log(`The computer picked ${computerChoice}!`)
@@ -43,15 +46,22 @@ if( (userChoice === "paper"  && computerChoice === "rock") || ( userChoice === "
     || (userChoice == "rock" && computerChoice == "scissors") )
 {
     console.log(`You win! ${userChoice} beats ${computerChoice}`)
+    win++
 }
 else if(userChoice === computerChoice)
 {
     console.log(` Tie! You and the computer both picked ${userChoice}`) 
+    tie++
 }
 else{
-    console.log(`You lose! ${computerChoice} beats $[userChoice] `)
+    console.log(`You lose! ${computerChoice} beats ${userChoice}`)
+    lose++
 
 
+}
+    console.log(`You won ${win} times`)
+    console.log(`You lose ${lose}`)
+    console.log(`You tied ${tie} times`)
 }
 
 
