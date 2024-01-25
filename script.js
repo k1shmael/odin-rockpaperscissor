@@ -8,44 +8,50 @@ function getComputerChoice(paper,rock,scissors){
     return computerChoice ; 
 
 }
-let computerChoice = getComputerChoice("eock", "paper", "scissors");
 
 
- function userChoice() {
+
+function userChoices() {
         let  userChoice = prompt("Rock, Paper or Scissors").toLowerCase();
    
   
-    if(userChoice ===  ("rock" || "scissors" || "paper") ){
+    if (userChoice === ("rock") || ("scissors")|| ("paper"))  {
 
 
         console.log(`You picked ${userChoice}! `)
 
+       }
        
-        
-
-        
-    }
-
-    else{
+       else{
 
             console.log("Try Again")
-        }
+    }
+
+    return userChoice;
     }
 
 
 
-    userChoice();
+    
+   let computerChoice = getComputerChoice("rock", "paper", "scissors");
+   let userChoice = userChoices();
+   
 
     console.log(`The computer picked ${computerChoice}!`)
 
-    if( (userChoice === "paper"  && computerChoice === "rock") || ( userChoice === "scissors" && computerChoice === "paper")
+if( (userChoice === "paper"  && computerChoice === "rock") || ( userChoice === "scissors" && computerChoice === "paper")
     || (userChoice == "rock" && computerChoice == "scissors") )
 {
-    console.log("You win!")
+    console.log(`You win! ${userChoice} beats ${computerChoice}`)
+}
+else if(userChoice === computerChoice)
+{
+    console.log(` Tie! You and the computer both picked ${userChoice}`) 
 }
 else{
+    console.log(`You lose! ${computerChoice} beats $[userChoice] `)
 
-    console.log("you lose")
+
 }
 
 
