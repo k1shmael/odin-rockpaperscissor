@@ -31,7 +31,7 @@ function userChoices() {
     }
 
 
- for (let i = 0; i < 5; i++) {
+  
     
    let computerChoice = getComputerChoice("rock", "paper", "scissors");
    let userChoice = userChoices();
@@ -62,7 +62,8 @@ else{
     console.log(`You won ${win} times`)
     console.log(`You lose ${lose}`)
     console.log(`You tied ${tie} times`)
-}
+    
+
 
 
 
