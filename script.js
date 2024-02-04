@@ -4,6 +4,8 @@ function getComputerChoice(paper,rock,scissors){
 
     let computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];  
 
+    
+
 
     return computerChoice ; 
 
@@ -17,8 +19,7 @@ function userChoices() {
   
     if (userChoice === ("rock") || ("scissors")|| ("paper"))  {
 
-
-        console.log(`You picked ${userChoice}! `)
+     console.log(`You picked ${userChoice}! `)
 
        }
        
@@ -30,47 +31,71 @@ function userChoices() {
     return userChoice;
     }
 
+    ///Code for the Rock Button
+
+    const rockButton = document.querySelector('#rock');
+    rockButton.addEventListener('click', () => {
+    const computer = getComputerChoice("paper","rock","scissors");
+    const rock= document.createElement('div');
+    rock.textContent = 'You Picked Rock!'   
+    const contain = document.querySelector('#container')
+    contain.appendChild(rock)   
+    const compResult =document.createElement('div')
+    compResult.textContent=(`The computer picked ${computer}!`)
+    contain.appendChild(compResult);
+
+    if(computer=== "rock" ){
+
+        const tie =  document.createElement('div');
+        tie.textContent = 'You and the Computer tied!';
+        const contain = document.querySelector('#container')
+        contain.appendChild(tie);
+    }
+    else if(computer === "paper"){
+
+        const  win = document.createElement('div');
+        win.textContent = "You win!";
+        const contain = document.querySelector('#container')
+        contain.appendChild(win);
+        }
+
+        else{
+            const lose = document.createElement(div);
+            lose.textContent = "You lost!";
+            const contain = document.querySelector('#container')
+            contain.appendChild(lose)
+  }
+});
+
+
+
+/// Code for the Paper Button
+
+
+    const paperButton = document.querySelector('#paper');
+    paperButton.addEventListener('click', () => {
+    const computer = getComputerChoice("paper","rock","scissors");
+    const paper= document.createElement('div');
+    paper.textContent = ('You Picked Paper!');
+    const contain = document.querySelector('#container')
+    contain.appendChild(paper) ;
+
+
+
+
+    });
+
+    ///Code for the Scissors Button
+
+    const scissorsButton = document.querySelector('#scissors');
+    scissorsButton.addEventListener('click', () => {
+    const scissors= document.createElement('div');
+    const computer = getComputerChoice("paper","rock","scissors");
+    scissors.textContent = ('You Picked Scissors!');
+    const contain = document.querySelector('#container')
+    contain.appendChild(scissors) 
+    });
+
+
 
   
-    
-   let computerChoice = getComputerChoice("rock", "paper", "scissors");
-   let userChoice = userChoices();
-   let tie = 0;
-   let win = 0;
-   let lose = 0;
-   
-
-    console.log(`The computer picked ${computerChoice}!`)
-
-if( (userChoice === "paper"  && computerChoice === "rock") || ( userChoice === "scissors" && computerChoice === "paper")
-    || (userChoice == "rock" && computerChoice == "scissors") )
-{
-    console.log(`You win! ${userChoice} beats ${computerChoice}`)
-    win++
-}
-else if(userChoice === computerChoice)
-{
-    console.log(` Tie! You and the computer both picked ${userChoice}`) 
-    tie++
-}
-else{
-    console.log(`You lose! ${computerChoice} beats ${userChoice}`)
-    lose++
-
-
-}
-    console.log(`You won ${win} times`)
-    console.log(`You lose ${lose}`)
-    console.log(`You tied ${tie} times`)
-    
-
-
-
-
-
-   
-   
-
-
-
-
