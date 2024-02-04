@@ -51,7 +51,7 @@ function userChoices() {
         const contain = document.querySelector('#container')
         contain.appendChild(tie);
     }
-    else if(computer === "paper"){
+    else if(computer === "scissors"){
 
         const  win = document.createElement('div');
         win.textContent = "You win!";
@@ -59,11 +59,11 @@ function userChoices() {
         contain.appendChild(win);
         }
 
-        else{
-            const lose = document.createElement(div);
+        else if(computer === "paper"){
+            const lose = document.createElement('div');
             lose.textContent = "You lost!";
-            const contain = document.querySelector('#container')
-            contain.appendChild(lose)
+            const contain = document.querySelector('#container');
+            contain.appendChild(lose);
   }
 });
 
@@ -79,6 +79,32 @@ function userChoices() {
     paper.textContent = ('You Picked Paper!');
     const contain = document.querySelector('#container')
     contain.appendChild(paper) ;
+    const compResult =document.createElement('div')
+    compResult.textContent=(`The computer picked ${computer}!`)
+    contain.appendChild(compResult);
+
+
+    if(computer=== "paper" ){
+
+        const tie =  document.createElement('div');
+        tie.textContent = 'You and the Computer tied!';
+        const contain = document.querySelector('#container')
+        contain.appendChild(tie);
+    }
+    else if(computer === "rock"){
+
+        const  win = document.createElement('div');
+        win.textContent = "You win!";
+        const contain = document.querySelector('#container')
+        contain.appendChild(win);
+        }
+
+        else if(computer === "scissors"){
+            const lose = document.createElement('div');
+            lose.textContent = "You lost!";
+            const contain = document.querySelector('#container')
+            contain.appendChild(lose)
+  }
 
 
 
@@ -94,6 +120,29 @@ function userChoices() {
     scissors.textContent = ('You Picked Scissors!');
     const contain = document.querySelector('#container')
     contain.appendChild(scissors) 
+
+
+    if(computer=== "scissors" ){
+
+        const tie =  document.createElement('div');
+        tie.textContent = 'You and the Computer tied!';
+        const contain = document.querySelector('#container')
+        contain.appendChild(tie);
+    }
+    else if(computer === "paper"){
+
+        const  win = document.createElement('div');
+        win.textContent = "You win!";
+        const contain = document.querySelector('#container')
+        contain.appendChild(win);
+        }
+
+        else if(computer === "rock"){
+            const lose = document.createElement('div');
+            lose.textContent = "You lost!";
+            const contain = document.querySelector('#container')
+            contain.appendChild(lose)
+  }
     });
 
 
