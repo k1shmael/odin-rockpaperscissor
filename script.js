@@ -8,28 +8,15 @@ function getComputerChoice(paper,rock,scissors){
 
 
     return computerChoice ; 
-
 }
 
+let playerPoints = 0;
+let compPoints = 0;
 
 
-function userChoices() {
-        let  userChoice = prompt("Rock, Paper or Scissors").toLowerCase();
+
+
    
-  
-    if (userChoice === ("rock") || ("scissors")|| ("paper"))  {
-
-     console.log(`You picked ${userChoice}! `)
-
-       }
-       
-       else{
-
-            console.log("Try Again")
-    }
-
-    return userChoice;
-    }
 
     ///Code for the Rock Button
 
@@ -50,6 +37,7 @@ function userChoices() {
         tie.textContent = 'You and the Computer tied!';
         const contain = document.querySelector('#container')
         contain.appendChild(tie);
+
     }
     else if(computer === "scissors"){
 
@@ -57,6 +45,8 @@ function userChoices() {
         win.textContent = "You win!";
         const contain = document.querySelector('#container')
         contain.appendChild(win);
+         playerPoints++
+       
         }
 
         else if(computer === "paper"){
@@ -64,7 +54,22 @@ function userChoices() {
             lose.textContent = "You lost!";
             const contain = document.querySelector('#container');
             contain.appendChild(lose);
+             compPoints++
+            
   }
+  console.log("Player Points:", playerPoints);
+    console.log("Computer Points:", compPoints);
+    if(playerPoints === 5){
+        alert("YOu win")
+     
+         
+       }
+     else if(compPoints === 5){
+        alert("you lose ")
+     
+    }
+
+    
 });
 
 
@@ -97,6 +102,8 @@ function userChoices() {
         win.textContent = "You win!";
         const contain = document.querySelector('#container')
         contain.appendChild(win);
+         playerPoints++
+      
         }
 
         else if(computer === "scissors"){
@@ -104,7 +111,23 @@ function userChoices() {
             lose.textContent = "You lost!";
             const contain = document.querySelector('#container')
             contain.appendChild(lose)
+            compPoints++
+        
   }
+  console.log("Player Points:", playerPoints);
+    console.log("Computer Points:", compPoints);
+
+    if(playerPoints === 5){
+        alert("YOu win")
+     
+         
+       }
+     else if(compPoints === 5){
+        alert("you lose ")
+     
+     
+       
+     }
 
 
 
@@ -135,6 +158,8 @@ function userChoices() {
         win.textContent = "You win!";
         const contain = document.querySelector('#container')
         contain.appendChild(win);
+         playerPoints++
+     
         }
 
         else if(computer === "rock"){
@@ -142,8 +167,42 @@ function userChoices() {
             lose.textContent = "You lost!";
             const contain = document.querySelector('#container')
             contain.appendChild(lose)
+            return compPoints++
+            
   }
+  console.log("Player Points:", playerPoints);
+    console.log("Computer Points:", compPoints);
+
+    if(playerPoints === 5){
+        alert("YOu win")
+     
+         
+       }
+     else if(compPoints === 5){
+        alert("you lose ")
+     
+     
+       
+     }
     });
+
+    
+    
+    
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
 
 
 
