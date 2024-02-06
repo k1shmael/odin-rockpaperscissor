@@ -59,16 +59,17 @@ let compPoints = 0;
   }
   console.log("Player Points:", playerPoints);
     console.log("Computer Points:", compPoints);
+    
     if(playerPoints === 5){
-        alert("YOu win")
+        window.open('win.html')
      
          
        }
      else if(compPoints === 5){
-        alert("you lose ")
+        window.open('lose.html')
      
-    }
-
+       
+     }
     
 });
 
@@ -118,13 +119,12 @@ let compPoints = 0;
     console.log("Computer Points:", compPoints);
 
     if(playerPoints === 5){
-        alert("YOu win")
+        window.open('win.html')
      
          
        }
      else if(compPoints === 5){
-        alert("you lose ")
-     
+        window.open('lose.html')
      
        
      }
@@ -174,13 +174,12 @@ let compPoints = 0;
     console.log("Computer Points:", compPoints);
 
     if(playerPoints === 5){
-        alert("YOu win")
+        window.open('win.html')
      
          
        }
      else if(compPoints === 5){
-        alert("you lose ")
-     
+        window.open('lose.html')
      
        
      }
